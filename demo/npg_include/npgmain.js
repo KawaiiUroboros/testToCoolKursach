@@ -182,8 +182,9 @@ let app = (() => {
       endPathq = "rbf"
       parent.lastChild.textContent = `K=rbf`;
     }
-    path = endPathq + "/" + pathes[4] + "/" + pathes[5];
-    console.log("MEW"+path);
+
+    path = "https://kawaiiuroboros.github.io/testToCoolKursach/"+  endPathq + "/" + pathes[5] + "/" + pathes[6];
+    console.log("MMMMM"+endPathq);
     return path;
   }
   function GetPictureG(parent, mainPicture, value) {
@@ -205,7 +206,7 @@ let app = (() => {
       endPath = "5"
       parent.lastChild.textContent = `G=5`;
     }
-    path =  pathes[3] + "/" + endPath + "/" + pathes[5];
+    path = "https://kawaiiuroboros.github.io/testToCoolKursach/" + pathes[4] + "/" + endPath + "/" + pathes[6];
     return path;
   }
   function GetPictureC(parent, mainPicture, value) {
@@ -227,7 +228,7 @@ let app = (() => {
       endPath = "100.png"
       parent.lastChild.textContent = `C=100`;
     }
-    path =  pathes[3] + "/" + pathes[4] + "/" + endPath;
+    path = "https://kawaiiuroboros.github.io/testToCoolKursach/" + pathes[4] + "/" + pathes[5] + "/" + endPath;
     return path;
   }
   function updatePoints() {
