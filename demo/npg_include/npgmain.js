@@ -173,17 +173,17 @@ let app = (() => {
     console.log(value);
     pathes = mainPicture.src.split('/')
     if (value < 34) {
-      endPath = "linear"
+      endPathq = "linear"
       parent.lastChild.textContent = `K=linear`;
     } else if (value < 67) {
-      endPath = "poly"
+      endPathq = "poly"
       parent.lastChild.textContent = `K=poly`;
     } else {
-      endPath = "rbf"
+      endPathq = "rbf"
       parent.lastChild.textContent = `K=rbf`;
     }
-    path = endPath + "/" + pathes[4] + "/" + pathes[5];
-    console.log(path);
+    path = endPathq + "/" + pathes[4] + "/" + pathes[5];
+    console.log("MEW"+path);
     return path;
   }
   function GetPictureG(parent, mainPicture, value) {
