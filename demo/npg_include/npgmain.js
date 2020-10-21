@@ -182,7 +182,7 @@ let app = (() => {
       endPath = "rbf"
       parent.lastChild.textContent = `K=rbf`;
     }
-    path = "./" + endPath + "/" + pathes[4] + "/" + pathes[5];
+    path = endPath + "/" + pathes[4] + "/" + pathes[5];
     console.log(path);
     return path;
   }
@@ -205,7 +205,7 @@ let app = (() => {
       endPath = "5"
       parent.lastChild.textContent = `G=5`;
     }
-    path = "./" + pathes[3] + "/" + endPath + "/" + pathes[5];
+    path =  pathes[3] + "/" + endPath + "/" + pathes[5];
     return path;
   }
   function GetPictureC(parent, mainPicture, value) {
@@ -227,7 +227,7 @@ let app = (() => {
       endPath = "100.png"
       parent.lastChild.textContent = `C=100`;
     }
-    path = "./"  + pathes[3] + "/" + pathes[4] + "/" + endPath;
+    path =  pathes[3] + "/" + pathes[4] + "/" + endPath;
     return path;
   }
   function updatePoints() {
