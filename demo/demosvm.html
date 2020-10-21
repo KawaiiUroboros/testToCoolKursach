@@ -1,0 +1,115 @@
+<html>
+<head>
+<title>svmjs Support Vector Machine in Javascript: demo</title>
+<link type="text/css" href="./jqueryui/css/ui-lightness/jquery-ui-1.8.21.custom.css" rel="Stylesheet" />	
+<script type="text/javascript" src="./jqueryui/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="./jqueryui/js/jquery-ui-1.8.21.custom.min.js"></script>
+<script defer  src="./npg_include/npgmain.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
+<link rel="stylesheet" href="../styles.css" />
+
+
+
+</head>
+
+<body onLoad="NPGinit(10);">
+
+  <section class="hero is-fullheight is-primary is-bold">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">В джаваскрипте</h1>
+            <h3 class="subtitle">маленькая визуализация svm на js алгоритме<br>писать на нем машобуч не надо, но для веба самый раз</h2>
+            <h3></h3>
+
+            <div class="columns is-gapless  is-mobile">
+                <div class="column">
+                    <div class="component" style="height: 100%; width: 100%">
+                        <main style="margin: auto;">
+                            <div class="presets">
+                                <button onclick="app.reset()" class="button is-primary">По умолчанию</button>
+                            </div>
+
+                            <div class="sliders">
+                                <svg preserveAspectRatio="none" viewBox="0 0 140 100">
+                                    <path d="" class="line-shadow"></path>
+                                    <path d="" class="line"></path>
+                                </svg>
+
+                                <div class="range-slider">
+                                    <input id = "slider1" type="range" orient="vertical" min="1" max="100" />
+                                    <div class="range-slider__bar"></div>
+                                    <div class="range-slider__thumb"></div>
+                                </div>
+
+                                <div class="range-slider">
+                                    <input type="range" orient="vertical" min="0" max="100" />
+                                    <div class="range-slider__bar"></div>
+                                    <div class="range-slider__thumb"></div>
+                                </div>
+
+                                <div class="range-slider">
+                                    <input type="range" orient="vertical" min="0" max="100" />
+                                    <div class="range-slider__bar"></div>
+                                    <div class="range-slider__thumb"></div>
+                                </div>
+
+                                <div class="range-slider">
+                                    <input type="range" orient="vertical" min="0" max="100" />
+                                    <div class="range-slider__bar"></div>
+                                    <div class="range-slider__thumb"></div>
+                                </div>
+
+                                <div class="range-slider">
+                                    <input type="range" orient="vertical" min="0" max="100" />
+                                    <div class="range-slider__bar"></div>
+                                    <div class="range-slider__thumb"></div>
+                                </div>
+
+                                <div class="range-slider">
+                                    <input type="range" orient="vertical" min="0" max="100" />
+                                    <div class="range-slider__bar"></div>
+                                    <div class="range-slider__thumb"></div>
+                                </div>
+
+                                <div class="range-slider">
+                                    <input type="range" orient="vertical" min="0" max="100" />
+                                    <div class="range-slider__bar"></div>
+                                    <div class="range-slider__thumb"></div>
+                                </div>
+                            </div>
+                        </main>
+
+                    </div>
+                </div>
+
+                <div class="card column">
+                    <div class="card-content">
+                     
+                      <canvas id="NPGcanvas"  style="margin-left: 5px;" width="600" height="490">Browser not supported for Canvas. Get a real browser.</canvas>
+                      
+                      <div hidden="true"  id="foptsdiv">
+                      <!-- <div style="width:230px; float: left; margin-left: 10px;"><div id="slider1"></div><br/><span id="creport">C = 1.0</span></div> -->
+                      <div style="width:230px; float: right; margin-right: 10px;"><div id="slider2"></div><br/><span id="sigreport">RBF Kernel sigma = 1.0</span></div>
+                      </div>
+                      
+                      
+                    </div>
+                    
+                    <footer class="card-footer">
+                    
+                        <a  href="../index.html" class="card-footer-item">
+                        Python</a>
+                        <a href="#"  class="card-footer-item"><svg width="1em" height="1em" style="margin-right: 3px;" viewBox="0 0 16 16" class="bi bi-circle-half" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M8 15V1a7 7 0 1 1 0 14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+                        </svg>Javascript</a>
+                        <a href="../tutorial.html" class="card-footer-item">Tutorial</a>
+                        
+                    </footer><progress style="border-radius: 0 !important;" class="progress is-primary" value="66.8" max="100">66%</progress>
+                </div>
+            </div>
+        </div>
+
+</section>
+
+</body>
+</html>

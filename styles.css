@@ -1,0 +1,305 @@
+* {
+    outline: none;
+  }
+  /* mouse over link */
+  
+  a {
+    color: #00c5a1 ;
+  }
+  a:link{
+    color: #f14668;
+  }
+a:hover {
+    color: #f14668;
+  }
+  a:active {
+    color:#00c5a2;
+  }
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    height: 100%;
+  }
+  
+  .component {
+    position: relative;
+    color: white;
+    background-color: #3F3047;
+    border-radius: 10px;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.5), 0px -2px 40px rgba(0, 0, 0, 0.3);
+    min-width: 280px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+  }
+  @media (min-width: 800px) {
+    .component {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+              flex-direction: row;
+    }
+  }
+  .component:before, .component:after {
+    content: '';
+    background-color: transparent;
+    position: absolute;
+    z-index: -1;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
+    top: 100%;
+    bottom: -5px;
+    left: 8%;
+    right: 8%;
+    border-radius: 50%;
+  }
+  .component:after {
+    box-shadow: 0 25px 20px rgba(0, 0, 0, 0.6);
+    left: 12%;
+    right: 12%;
+  }
+  .component aside {
+    position: relative;
+    display: block;
+    background: #373641;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  @media (min-width: 800px) {
+    .component aside {
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 10px;
+      min-width: 140px;
+    }
+  }
+  .component aside .preamp {
+    height: 70px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+  }
+  @media (min-width: 800px) {
+    .component aside .preamp {
+      height: 100px;
+    }
+  }
+  .component aside .preamp > label {
+    color: #DEDFE4;
+    text-transform: uppercase;
+    display: block;
+    font-weight: 700;
+  }
+  .component main {
+    position: relative;
+    display: block;
+    padding-bottom: 50px;
+  }
+  @media (min-width: 800px) {
+    .component main {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+  .component main .presets {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    padding-left: calc(40px/2 - .5em);
+
+    background: transparent;
+  }
+  @media (min-width: 800px) {
+    .component main .presets {
+      padding-left: calc(80px/2 - .5em);
+      -webkit-box-pack: start;
+              justify-content: flex-start;
+    }
+  }
+
+  @media (min-width: 800px) {
+    .component main .presets > select {
+      min-width: 200px;
+      padding-left: 10px;
+    }
+  }
+  .component main .presets > select option {
+    background-color: #3F3047;
+  }
+
+  @media (min-width: 800px) {
+    .component main .presets > button {
+      min-width: 80px;
+    }
+  }
+  .component main .sliders {
+    position: relative;
+    display: inline-block;
+  }
+  .component main .sliders .range-slider {
+    display: inline-block;
+    width: 40px;
+    position: relative;
+    height: 300px;
+    float: left;
+  }
+  @media (min-width: 800px) {
+    .component main .sliders .range-slider {
+      width: 80px;
+    }
+  }
+
+
+  .component main .sliders .range-slider__thumb {
+    opacity: 1;
+    position: absolute;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    background-color: white;
+    color: #8376FF;
+    text-align: center;
+    font-size: 40%;
+    box-shadow: 0 0 2px #373641;
+    border-radius: 50%;
+    pointer-events: none;
+    cursor: pointer;
+    z-index: 2;
+  }
+  @media (min-width: 800px) {
+    .component main .sliders .range-slider__thumb {
+      left: 30px;
+    }
+  }
+  .component main .sliders .range-slider__bar {
+    left: 18px;
+    bottom: 0;
+    position: absolute;
+    background: -webkit-gradient(linear, left top, left bottom, from(#FFED6F), to(#00C5A2));
+    background: linear-gradient(#FFED6F, #00C5A2);
+    pointer-events: none;
+    width: 4px;
+    border-radius: 10px;
+    opacity: 1;
+  }
+  @media (min-width: 800px) {
+    .component main .sliders .range-slider__bar {
+      left: 38px;
+    }
+  }
+  .component main .sliders .range-slider input[type=range][orient=vertical] {
+    position: relative;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    -webkit-writing-mode: bt-lr;
+        -ms-writing-mode: bt-lr;
+            writing-mode: bt-lr;
+    -webkit-appearance: slider-vertical;
+  }
+  .component main .sliders .range-slider input[type=range][orient=vertical]::-webkit-slider-runnable-track, .component main .sliders .range-slider input[type=range][orient=vertical]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+  .component main .sliders .range-slider input[type=range][orient=vertical]::-webkit-slider-runnable-track {
+    border: none;
+    background: #8f719f;
+    width: 4px;
+    border-color: #8f719f;
+    border-radius: 10px;
+    box-shadow: 0 0 0 2px #3F3047;
+  }
+  .component main .sliders .range-slider input[type=range][orient=vertical]::-moz-range-track {
+    border: none;
+    background: #8f719f;
+    width: 4px;
+    border-color: #8f719f;
+    border-radius: 10px;
+    box-shadow: 0 0 0 2px #3F3047;
+  }
+  .component main .sliders .range-slider input[type=range][orient=vertical]::-ms-track {
+    border: none;
+    background: #8f719f;
+    width: 4px;
+    border-color: #8f719f;
+    border-radius: 10px;
+    box-shadow: 0 0 0 2px #3F3047;
+    color: transparent;
+    height: 100%;
+  }
+  .component main .sliders .range-slider input[type=range][orient=vertical]::-ms-fill-lower, .component main .sliders .range-slider input[type=range][orient=vertical]::-ms-fill-upper, .component main .sliders .range-slider input[type=range][orient=vertical]::-ms-tooltip {
+    display: none;
+  }
+  .component main .sliders .range-slider input[type=range][orient=vertical]::-webkit-slider-thumb {
+    left: -20px;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+  }
+  .component main .sliders .range-slider input[type=range][orient=vertical]::-moz-range-thumb {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+  }
+  .component main .sliders .range-slider input[type=range][orient=vertical]::-ms-thumb {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+  }
+  .component main .sliders svg {
+    z-index: 1;
+    overflow: visible;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke-width: 1;
+  }
+  .component main .sliders svg .line {
+    stroke: #00C5A2;
+  }
+  .component main .sliders svg .line-shadow {
+    z-index: 1;
+    stroke-width: 2;
+    stroke: #252525;
+    opacity: .35;
+    display: none;
+  }
+  @media (min-width: 800px) {
+    .component main .sliders svg .line-shadow {
+      display: block;
+    }
+  }
+  
+  .design-reference {
+    position: fixed;
+    bottom: 6px;
+    right: 6px;
+    color: #8e8e9b;
+    font-size: 70%;
+    display: none;
+  }
+  @media (min-height: 600px) {
+    .design-reference {
+      display: block;
+    }
+  }
+  
